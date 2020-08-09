@@ -4,6 +4,6 @@ cpp = Skill('C++')
 
 c = Skill('C')
 
-cpp.relate(c, 'lower')
+cpp.relate(c, relation = 'upper')
 
-print(cpp.friends['lower'])
+print(cpp.friends('upper'))
