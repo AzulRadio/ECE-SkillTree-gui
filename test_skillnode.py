@@ -1,4 +1,4 @@
-from Skill import SkillNode
+from SkillNode import SkillNode
 
 cpp = SkillNode('C++')
 
@@ -16,10 +16,9 @@ a = int(input('0 = quit, 1 = c, 2 = oop, 3 = c++\n'))
 a_last = a
 
 while (not a == 0):
-    if (a == ''):
-        a = a_last
-    else:
+    if not (a == ''):
         a_last = int(a)
+    a = a_last
     if (a == 1):
         print(c.learn())
     if (a == 2):

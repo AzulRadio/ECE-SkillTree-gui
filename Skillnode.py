@@ -1,9 +1,11 @@
 from random import randint
 
-def standard_learn(skillPoints, defactor, difficultyBonus):
-    if randint(1, 100)//defactor > skillPoints:
-        skillPoints += randint(1, 10)//defactor
-        skillPoints += difficultyBonus
+def standard_learn(skillPoints, factor, difficultyBonus = 0):
+    if randint(1, 100) > skillPoints:
+        addPoints = randint(1, 10) + factor + difficultyBonus
+        if addPoints < 0:
+            return skillPoints
+        skillPoints += addPoints
     if (skillPoints > 100):
         skillPoints = 100
     return skillPoints
@@ -14,15 +16,13 @@ class SkillNode:
     passLine = 0
     proficient = False
     locked = True
-    visible = False
     timeSpent = 0
     __friends = dict()
     relation = ('lower', 'similar')
     
-    def __init__(self, name, locked = True, visible = False, passLine = 25):
+    def __init__(self, name, locked = True, passLine = 25):
         self.name = name
         self.locked = locked
-        self.visible = visible
         self.passLine = passLine
         self.__friends = dict()
         for m in self.relation:
@@ -46,47 +46,54 @@ class SkillNode:
         
         
     '''
-    if show_name = True, return a list of string
-    if show_name = False, return a list of SkillNode instances
+    if for_print = True, return a list of string
+    if for_print = False, return a list of SkillNode instances
 
     friends() DOES NOT need to be updated when new relation is added.
     '''
-    def friends(self, relation = 'lower', show_name = True):
+    def friends(self, relation = 'lower', for_print = True):
         if (relation not in self.relation):
             print(str(self) + '.friend() error: invalid relation')
             return
         friend = []
-        if (show_name):
+        if (for_print):
             for e in self.__friends[relation]:
                 friend.append(e.name)
         else:
             friend = self.__friends[relation]
         return friend
-    
+
+    def try_unlock(self):
+        lower = self.friends(relation = 'lower', for_print = False)
+        numLower = 0
+        for i in lower:
+            if not i.proficient:
+                numLower -= 1
+        self.locked = not (numLower == 0)
+        return numLower
 
     '''
     modify 'value' to change the function if necessary
     '''
 
     '''
-    One prerequisite misses increase your defactor by one
-    If one skill is proficient but prerequisites are not met, defactor is default + 1
+    One prerequisite misses decrease your factor by one
+    If one skill is proficient but prerequisites are not met, factor minus one
 
-    defactors affect your learning success rate and skillpoint gain.
+    One similar skill proficient increase your factor by one
+    
+    factor affect your learning success rate and skillpoint gain.
     '''
-    def get_defactor(self, default = 1):
-        value = 'lower'
+    def get_factor(self):
         
-        friend = self.friends(relation = value, show_name = False)
-        defactor = default
-        for i in friend:
-            if not i.proficient:
-                defactor += 1
-        if (defactor == default):
-            self.locked = False
+        factor = 0
+        factor = self.try_unlock()
+        
         if self.proficient and self.locked:
-            defactor = default + 1
-        return defactor
+            factor = -1
+
+        factor += len(self.friends(relation = 'similar', for_print = False))
+        return factor
 
     def check_proficient(self):
         if self.skillPoints >= self.passLine:
@@ -94,17 +101,21 @@ class SkillNode:
             return True
         return False
     
-    def learn(self, learning_func = standard_learn, adjustment = (1, 0)):
-        adjustment = (self.get_defactor(), 0)
+    def learn(self, learning_func = standard_learn, adjustment = 0):
+        if learning_func == standard_learn:
+            adjustment = (self.get_factor(), 0)
+        else:
+            try_unlock()
         self.skillPoints = learning_func(self.skillPoints, *adjustment) 
         self.check_proficient()
         SkillNode.timeSpent += 1
         return self.name, self.skillPoints, self.locked, self.proficient, SkillNode.timeSpent
 
     def use(self, difficultyLevel = 1):
-        defactor = self.get_defactor()
-        if (randint(1, 100) < self.skillPoints // difficultyLevel):
-            self.learn(adjustment = (defactor, difficultyLevel))
+        factor = self.get_factor()
+        check = randint(1, 100)
+        if (check < self.skillPoints // difficultyLevel):
+            self.learn(adjustment = (factor, difficultyLevel))
             return True
         return False
 
