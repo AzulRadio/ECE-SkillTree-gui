@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/">
+    <file>Skillnode_locked.png</file>
+	<file>Skillnode_unlocked.png</file>
+  </qresource>
+</RCC>
