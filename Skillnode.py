@@ -73,10 +73,6 @@ class SkillNode:
         return numLower
 
     '''
-    modify 'value' to change the function if necessary
-    '''
-
-    '''
     One prerequisite misses decrease your factor by one
     If one skill is proficient but prerequisites are not met, factor minus one
 
@@ -109,9 +105,7 @@ class SkillNode:
         self.skillPoints = learning_func(self.skillPoints, *adjustment) 
         self.check_proficient()
         SkillNode.timeSpent += 1
-        #print(self.skillPoints)
-        #return self.name, self.skillPoints, self.locked, self.proficient, SkillNode.timeSpent
-
+        
     def use(self, difficultyLevel = 1):
         factor = self.get_factor()
         check = randint(1, 100)

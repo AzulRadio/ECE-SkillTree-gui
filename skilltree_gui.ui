@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>804</width>
-    <height>468</height>
+    <width>1133</width>
+    <height>455</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>1</horstretch>
+    <verstretch>1</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>SkillTree</string>
@@ -17,8 +23,58 @@
    <widget class="QPushButton" name="c">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>90</y>
+      <x>220</x>
+      <y>70</y>
+      <width>71</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/Skillnode_locked.png); color: &quot;white&quot;</string>
+    </property>
+    <property name="text">
+     <string>C</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="python">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>70</y>
+      <width>71</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/Skillnode_locked.png); color: &quot;white&quot;</string>
+    </property>
+    <property name="text">
+     <string>Python</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="stc51">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>170</y>
       <width>71</width>
       <height>71</height>
      </rect>
@@ -30,45 +86,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true"/>
-    </property>
-    <property name="text">
-     <string>C</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="python">
-    <property name="geometry">
-     <rect>
-      <x>540</x>
-      <y>90</y>
-      <width>71</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Agency FB</family>
-      <pointsize>18</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Python</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="stc51">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>190</y>
-      <width>71</width>
-      <height>71</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Agency FB</family>
-      <pointsize>20</pointsize>
-     </font>
+     <string notr="true">border-image: url(:/Skillnode_locked.png); color: &quot;white&quot;</string>
     </property>
     <property name="text">
      <string>51</string>
@@ -77,8 +95,8 @@
    <widget class="QPushButton" name="cpp">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>190</y>
+      <x>220</x>
+      <y>170</y>
       <width>71</width>
       <height>71</height>
      </rect>
@@ -89,6 +107,9 @@
       <pointsize>20</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/Skillnode_locked.png); color: &quot;white&quot;</string>
+    </property>
     <property name="text">
      <string>C++</string>
     </property>
@@ -96,8 +117,8 @@
    <widget class="QPushButton" name="arduino">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>190</y>
+      <x>400</x>
+      <y>170</y>
       <width>71</width>
       <height>71</height>
      </rect>
@@ -108,6 +129,9 @@
       <pointsize>18</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/Skillnode_locked.png); color: &quot;white&quot;</string>
+    </property>
     <property name="text">
      <string>Arduino</string>
     </property>
@@ -115,8 +139,8 @@
    <widget class="QPushButton" name="stm32">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>290</y>
+      <x>40</x>
+      <y>270</y>
       <width>71</width>
       <height>71</height>
      </rect>
@@ -127,6 +151,9 @@
       <pointsize>16</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/Skillnode_locked.png); color: &quot;white&quot;</string>
+    </property>
     <property name="text">
      <string>STM32</string>
     </property>
@@ -134,8 +161,8 @@
    <widget class="QPushButton" name="ros">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>290</y>
+      <x>220</x>
+      <y>270</y>
       <width>71</width>
       <height>71</height>
      </rect>
@@ -146,6 +173,9 @@
       <pointsize>20</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/Skillnode_locked.png); color: &quot;white&quot;</string>
+    </property>
     <property name="text">
      <string>ROS</string>
     </property>
@@ -153,8 +183,8 @@
    <widget class="QPushButton" name="opencvCpp">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>290</y>
+      <x>400</x>
+      <y>270</y>
       <width>71</width>
       <height>71</height>
      </rect>
@@ -164,6 +194,9 @@
       <family>Agency FB</family>
       <pointsize>16</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/Skillnode_locked.png); color: &quot;white&quot;</string>
     </property>
     <property name="text">
      <string>OpenCV
@@ -173,8 +206,8 @@ C++</string>
    <widget class="QPushButton" name="raspberry">
     <property name="geometry">
      <rect>
-      <x>430</x>
-      <y>190</y>
+      <x>580</x>
+      <y>170</y>
       <width>71</width>
       <height>71</height>
      </rect>
@@ -187,6 +220,9 @@ C++</string>
       <bold>false</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/Skillnode_locked.png); color: &quot;white&quot;</string>
+    </property>
     <property name="text">
      <string>Raspberry</string>
     </property>
@@ -194,8 +230,8 @@ C++</string>
    <widget class="QPushButton" name="opencvPython">
     <property name="geometry">
      <rect>
-      <x>650</x>
-      <y>190</y>
+      <x>940</x>
+      <y>170</y>
       <width>71</width>
       <height>71</height>
      </rect>
@@ -206,6 +242,9 @@ C++</string>
       <pointsize>16</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/Skillnode_locked.png); color: &quot;white&quot;</string>
+    </property>
     <property name="text">
      <string>OpenCV
 Python</string>
@@ -214,8 +253,8 @@ Python</string>
    <widget class="QPushButton" name="numpy">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>190</y>
+      <x>760</x>
+      <y>170</y>
       <width>71</width>
       <height>71</height>
      </rect>
@@ -225,6 +264,9 @@ Python</string>
       <family>Agency FB</family>
       <pointsize>18</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/Skillnode_locked.png); color: &quot;white&quot;</string>
     </property>
     <property name="text">
      <string>numpy</string>
@@ -233,8 +275,8 @@ Python</string>
    <widget class="QPushButton" name="pytorch">
     <property name="geometry">
      <rect>
-      <x>540</x>
-      <y>290</y>
+      <x>760</x>
+      <y>270</y>
       <width>71</width>
       <height>71</height>
      </rect>
@@ -245,6 +287,9 @@ Python</string>
       <pointsize>18</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/Skillnode_locked.png); color: &quot;white&quot;</string>
+    </property>
     <property name="text">
      <string>pytorch</string>
     </property>
@@ -252,7 +297,7 @@ Python</string>
    <widget class="QLabel" name="day">
     <property name="geometry">
      <rect>
-      <x>650</x>
+      <x>1000</x>
       <y>30</y>
       <width>81</width>
       <height>31</height>
@@ -271,14 +316,255 @@ Python</string>
    <widget class="QLabel" name="labelc">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>90</y>
-      <width>71</width>
+      <x>300</x>
+      <y>70</y>
+      <width>81</width>
       <height>71</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>16</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
     <property name="text">
-     <string/>
+     <string>Skillpoints : 
+Locked : 
+Proficient:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelpython">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>70</y>
+      <width>81</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Skillpoints : 
+Locked : 
+Proficient:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelstc51">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>170</y>
+      <width>81</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Skillpoints : 
+Locked : 
+Proficient:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelstm32">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>270</y>
+      <width>81</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Skillpoints : 
+Locked : 
+Proficient:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelcpp">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>170</y>
+      <width>81</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Skillpoints : 
+Locked : 
+Proficient:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelros">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>270</y>
+      <width>81</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Skillpoints : 
+Locked : 
+Proficient:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelarduino">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>170</y>
+      <width>81</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Skillpoints : 
+Locked : 
+Proficient:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelopencvcpp">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>270</y>
+      <width>81</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Skillpoints : 
+Locked : 
+Proficient:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelraspberry">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>170</y>
+      <width>81</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Skillpoints : 
+Locked : 
+Proficient:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelnumpy">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>170</y>
+      <width>81</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Skillpoints : 
+Locked : 
+Proficient:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelpytorch">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>270</y>
+      <width>81</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Skillpoints : 
+Locked : 
+Proficient:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelopencvpy">
+    <property name="geometry">
+     <rect>
+      <x>1020</x>
+      <y>170</y>
+      <width>81</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Skillpoints : 
+Locked : 
+Proficient:</string>
     </property>
    </widget>
   </widget>
@@ -287,7 +573,7 @@ Python</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>804</width>
+     <width>1133</width>
      <height>22</height>
     </rect>
    </property>

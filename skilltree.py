@@ -35,9 +35,3 @@ raspberry.relate(arduino, 'similar')
 opencvpy.relate(opencvcpp, 'similar')
 opencvcpp.relate(opencvpy, 'similar')
 
-def learn(node):
-    node.learn()
-
-def status(node):
-    return "{0}\nSkillpoints : {1}\nLocked : {2}\n Proficient: {3}" \
-           .format(str(node.name), str(node.skillPoints), str(node.locked), str(node.proficient))
