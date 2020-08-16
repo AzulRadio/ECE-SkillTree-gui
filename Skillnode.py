@@ -109,9 +109,7 @@ class SkillNode:
         self.skillPoints = learning_func(self.skillPoints, *adjustment) 
         self.check_proficient()
         SkillNode.timeSpent += 1
-        #print(self.skillPoints)
-        #return self.name, self.skillPoints, self.locked, self.proficient, SkillNode.timeSpent
-
+        
     def use(self, difficultyLevel = 1):
         factor = self.get_factor()
         check = randint(1, 100)
